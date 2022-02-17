@@ -1,56 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Momentum Insights</title>
+    <title>Momentum Insights Dash</title>
     <link rel="icon" type="image/x-icon" href="https://momentumapp.web.app/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://unpkg.com/@primer/css@^19.0.0/dist/primer.css" />
+
+
+    <script>(function () { var o = "6fb944e0", a = ["Object.assign", "Symbol", "Symbol.for"].join("%2C"), n = window; function r(o, a) { void 0 === a && (a = !1), "complete" !== document.readyState && window.addEventListener("load", r.bind(null, o, a), { capture: !1, once: !0 }); var n = document.createElement("script"); n.type = "text/javascript", n.async = a, n.src = o, document.head.appendChild(n) } function t() { var a; if (void 0 === n.CommandBar) { delete n.__CommandBarBootstrap__; var t = Symbol.for("CommandBar::configuration"), e = Symbol.for("CommandBar::orgConfig"), m = Symbol.for("CommandBar::disposed"), i = Symbol.for("CommandBar::isProxy"), l = Symbol.for("CommandBar::queue"), d = Symbol.for("CommandBar::unwrap"), c = [], s = localStorage.getItem("commandbar.lc"), u = s && s.includes("local") ? "http://localhost:8000" : "https://api.commandbar.com", p = Object.assign(((a = {})[t] = { uuid: o }, a[e] = {}, a[m] = !1, a[i] = !0, a[l] = new Array, a[d] = function () { return p }, a), n.CommandBar); n.CommandBar = new Proxy(p, { get: function (o, a) { return a in p ? p[a] : function () { var o = Array.prototype.slice.call(arguments); o.unshift(a), p[l].push(o) } } }), null !== s && c.push("lc=" + s), c.push("version=2"), r(u + "/latest/" + o + "?" + c.join("&"), !0) } } void 0 === Object.assign || "undefined" == typeof Symbol || void 0 === Symbol.for ? (n.__CommandBarBootstrap__ = t, r("https://polyfill.io/v3/polyfill.min.js?version=3.101.0&callback=__CommandBarBootstrap__&features=" + a)) : t(); })();</script>
+    <script>
+      const loggedInUserId = 'default'; // example
+      window.CommandBar.boot(loggedInUserId);
+    </script>
+    <script>window.CommandBar.setTheme('#24292F');</script>
   </head>
   <body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
-<div class="Header pl-6 pr-6">
-  <div class="Header-item">
-    <a href="#" class="Header-link f4 d-flex flex-items-center">
-      <!-- <%= octicon "mark-github", class: "mr-2", height: 32 %> -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: white;"><path fill-rule="evenodd" d="M16.168 2.924L4.51 13.061a.25.25 0 00.164.439h5.45a.75.75 0 01.692 1.041l-2.559 6.066 11.215-9.668a.25.25 0 00-.164-.439H14a.75.75 0 01-.687-1.05l2.855-6.526zm-.452-1.595a1.341 1.341 0 012.109 1.55L15.147 9h4.161c1.623 0 2.372 2.016 1.143 3.075L8.102 22.721a1.149 1.149 0 01-1.81-1.317L8.996 15H4.674c-1.619 0-2.37-2.008-1.148-3.07l12.19-10.6z"></path></svg>
-    </a>
-  </div>
-  <div class="Header-item">
-    <input style="display: none;" type="search" class="form-control Header-input" />
-  </div>
-  <div class="Header-item Header-item--full">
-    <p style="display: none;">Menu</p>
-  </div>
-  <div class="Header-item mr-0">
-    <button class="btn-mktg btn-signup-mktg btn-small-mktg" type="button">Sign up</button>
-  </div>
-</div>
 
-      <div class="p-6"><br><br>
-        <center>
-        <h1 class="h0-mktg" style="text-align: center;">All your GitHub Activity in one place...</h1>
-        <br><br>
-        <button class="btn-mktg arrow-target-mktg btn-muted-mktg mr-3" type="button">
-            Learn more
-            <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-                <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-        </button>
-        <button class="btn-mktg arrow-target-mktg btn-signup-mktg" type="button">
-            Continue with GitHub
-            <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-                <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-        </button><br><br>
-        <a href="#" class="link-mktg arrow-target-mktg link-emphasis-mktg text-semibold f4-mktg">
-            Contribute to the project
-            <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-                <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-        </a>
-    </center>
+    <div class="Header">
+      <div class="Header-item">
+        <a href="https://github.com/login/oauth/authorize" class="Header-link f4 d-flex flex-items-center pl-4">
+          <!-- <%= octicon "mark-github", class: "mr-2", height: 32 %> -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: white;"><path fill-rule="evenodd" d="M16.168 2.924L4.51 13.061a.25.25 0 00.164.439h5.45a.75.75 0 01.692 1.041l-2.559 6.066 11.215-9.668a.25.25 0 00-.164-.439H14a.75.75 0 01-.687-1.05l2.855-6.526zm-.452-1.595a1.341 1.341 0 012.109 1.55L15.147 9h4.161c1.623 0 2.372 2.016 1.143 3.075L8.102 22.721a1.149 1.149 0 01-1.81-1.317L8.996 15H4.674c-1.619 0-2.37-2.008-1.148-3.07l12.19-10.6z"></path></svg>
+        </a>&nbsp;&nbsp;
+        <span class="Counter mr-1 color-bg-success-emphasis color-fg-on-emphasis">Prototype</span>
       </div>
+    </div>
+
+<div class="pl-6 pr-6 pt-4">
+    <h1>Welcome to Mission Control...</h1>
+    <br>
+      
+      <button class="btn mr-2 tooltipped tooltipped-s tooltipped-align-right-1" type="button" onclick="window.CommandBar.open()" aria-label="You can also use Cmd + K">
+        <!-- <%= octicon "search" %> -->
+        <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path></svg>
+      </button>
+      
+      <button class="btn btn-primary mr-2 tooltipped tooltipped-multiline tooltipped-s tooltipped-align-right-1" type="button" aria-label="As we use GitHub to run our app this link will take you to GitHub account settings to edit your profile." onclick="window.open('https://github.com/settings/profile', '_blank');" disabled>
+        <!-- <%= octicon "download" %> -->
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path></svg>        
+        <span>Edit Profile</span>
+      </button>
+      
+      <button class="btn btn-danger mr-2 tooltipped tooltipped-multiline tooltipped-s tooltipped-align-right-1" onclick="clearBanners()" type="button" aria-label="If you have any banners around the app you can clear all of them here.">
+        <!-- <%= octicon "download" %> -->
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="display: inline-block; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M2.343 13.657A8 8 0 1113.657 2.343 8 8 0 012.343 13.657zM6.03 4.97a.75.75 0 00-1.06 1.06L6.94 8 4.97 9.97a.75.75 0 101.06 1.06L8 9.06l1.97 1.97a.75.75 0 101.06-1.06L9.06 8l1.97-1.97a.75.75 0 10-1.06-1.06L8 6.94 6.03 4.97z"></path></svg>
+        <span>Clear Warnings</span>
+      </button>
+      
+      <button class="btn" type="button" onclick="window.open('https://github.com/reeceatkinson/momentum-alpha', '_blank');">
+        <!-- <%= octicon "device-desktop" %> -->
+        <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"></path></svg>
+        <span>Edit this page</span>
+      </button>
+      
+      <br><br>
+
+      <nav class="UnderlineNav" aria-label="Momentum Insights">
+        <div class="UnderlineNav-body">
+          <a class="UnderlineNav-item" id="defaultOpen" onclick="openMomentum(event, 'issues');" href="#">
+            <!-- <%= octicon "tools", class: "UnderlineNav-octicon" %> -->
+            <svg class="UnderlineNav-octicon octicon octicon-tools" version="1.1" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path></svg>
+            <span>Repositories</span>
+          </a>
+          <a class="UnderlineNav-item" href="#url">
+            <svg class="UnderlineNav-octicon octicon octicon-tools" version="1.1" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path><path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path></svg>
+            <span>Issues</span>
+          </a>
+          <a class="UnderlineNav-item" href="#url">
+            <svg class="UnderlineNav-octicon octicon octicon-tools" version="1.1" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"></path></svg>
+            <span>Pull Requests</span>
+          </a>
+          <a class="UnderlineNav-item" onclick="openMomentum(event, 'helper');" href="#">
+            <svg class="UnderlineNav-octicon octicon octicon-tools" version="1.1" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8.47 4.97a.75.75 0 000 1.06L9.94 7.5 8.47 8.97a.75.75 0 101.06 1.06l2-2a.75.75 0 000-1.06l-2-2a.75.75 0 00-1.06 0zM6.53 6.03a.75.75 0 00-1.06-1.06l-2 2a.75.75 0 000 1.06l2 2a.75.75 0 101.06-1.06L5.06 7.5l1.47-1.47z"></path><path fill-rule="evenodd" d="M12.246 13.307a7.5 7.5 0 111.06-1.06l2.474 2.473a.75.75 0 11-1.06 1.06l-2.474-2.473zM1.5 7.5a6 6 0 1110.386 4.094.75.75 0 00-.292.293A6 6 0 011.5 7.5z"></path></svg>
+            <span>Helper</span>
+          </a>
+          <a class="UnderlineNav-item" onclick="openMomentum(event, 'osnotices');" href="#">
+            <svg class="UnderlineNav-octicon octicon octicon-tools" version="1.1" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.655 14.916L8 14.25l.345.666a.752.752 0 01-.69 0zm0 0L8 14.25l.345.666.002-.001.006-.003.018-.01a7.643 7.643 0 00.31-.17 22.08 22.08 0 003.433-2.414C13.956 10.731 16 8.35 16 5.5 16 2.836 13.914 1 11.75 1 10.203 1 8.847 1.802 8 3.02 7.153 1.802 5.797 1 4.25 1 2.086 1 0 2.836 0 5.5c0 2.85 2.045 5.231 3.885 6.818a22.075 22.075 0 003.744 2.584l.018.01.006.003h.002z"></path></svg>
+            <span>OS Notices</span>
+          </a>
+        </div>
+        <div class="UnderlineNav-actions">
+          <a class="btn btn-sm" onclick="window.location.reload();">Refresh Insights</a>
+        </div>
+      </nav>
+
+      <div id="issues" class="tabcontent pt-3">
+        <h2>Your Repositories</h2>
+        
+      </div>
+
+      <div id="helper" class="tabcontent">
+        <div class="flash mt-3 flash-warn" id="warn">
+          <!-- <%= octicon "alert" %> -->
+          <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg>
+          Helper grabs results from <b>StackOverflow and GitHub Gists</b> to help solve problems and Google CSE to pull the results.
+        </div>
+      </div>
+
+      <div id="osnotices" class="tabcontent p-4 pt-3">
+      <div class="markdown-body">
+        <h2>Styling</h2>
+        <p>We use Primer by GitHub to style the website. You can check out their website <a href="https://primer.style/">here</a>.</p>
+        <h2>What do we use to pull data?</h2>
+        <p>We use the GitHub REST API which can be found <a href="https://docs.github.com/en/rest">here</a>. For helper we use Google Custom Search Engine to show results from Stack Overflow. Google CSE can be found <a href="https://programmablesearchengine.google.com/about/">here</a>.</p>
+      </div>
+      </div>
+
+
+
+    </div>
+
+    <script>
+      function clearBanners() {
+        document.getElementById("warn")
+        .outerHTML = "";
+      }
+</script>
+    <script>
+      // Navigation NEVER DELETE
+      function openMomentum(evt, serviceName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(serviceName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+  
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click()
+    </script>
+
   </body>
 </html>
