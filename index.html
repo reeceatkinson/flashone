@@ -1,55 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Momentum Insights</title>
-    <link rel="icon" type="image/x-icon" href="https://momentumapp.web.app/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://unpkg.com/@primer/css@^19.0.0/dist/primer.css" />
-  </head>
-  <body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
-<div class="Header pl-6 pr-6">
-  <div class="Header-item">
-    <a href="#" class="Header-link f4 d-flex flex-items-center">
-      <!-- <%= octicon "mark-github", class: "mr-2", height: 32 %> -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: white;"><path fill-rule="evenodd" d="M16.168 2.924L4.51 13.061a.25.25 0 00.164.439h5.45a.75.75 0 01.692 1.041l-2.559 6.066 11.215-9.668a.25.25 0 00-.164-.439H14a.75.75 0 01-.687-1.05l2.855-6.526zm-.452-1.595a1.341 1.341 0 012.109 1.55L15.147 9h4.161c1.623 0 2.372 2.016 1.143 3.075L8.102 22.721a1.149 1.149 0 01-1.81-1.317L8.996 15H4.674c-1.619 0-2.37-2.008-1.148-3.07l12.19-10.6z"></path></svg>
-    </a>
-  </div>
-  <div class="Header-item">
-    <input style="display: none;" type="search" class="form-control Header-input" />
-  </div>
-  <div class="Header-item Header-item--full">
-    <p style="display: none;">Menu</p>
-  </div>
-  <div class="Header-item mr-0">
-    <button onclick="window.open('https://github.com/login/oauth/authorize?client_id=d6320aa6c48eec24448b&redirect_uri=https://reeceatkinson.github.io/momentum-alpha/profile&state=abcd1234efg567', '_blank');" class="btn-mktg btn-signup-mktg btn-small-mktg" type="button">Sign up</button>
-  </div>
-</div>
-<div class="flash flash-full pl-6">
-  <strong>FlashOne is in BETA.</strong> We hope you love the BETA and also hope you will provide us with feedback.
-</div>
 
-      <div class="p-6"><br><br>
-        <center>
-        <h1 class="h0-mktg" style="text-align: center; color: white;">All your GitHub Activity in one place...</h1>
-        <br><br>
-        <button class="btn-mktg btn-muted-mktg mr-3" type="button">
-            Sign Up
-        </button>
-        <button class="btn-mktg arrow-target-mktg btn-signup-mktg" type="button" onclick="window.open('https://github.com/login/oauth/authorize?client_id=d6320aa6c48eec24448b&redirect_uri=https://reeceatkinson.github.io/momentum-alpha/profile&state=abcd1234efg567', '_blank');">
-            Sign IN
-            <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-                <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
-            </svg>
-        </button><br><br>
-        <a href="https://github.com/reeceatkinson/momentum-alpha" class="link-mktg link-emphasis-mktg text-semibold f4-mktg">
-            Contribute to the project
-        </a>
-        <br><br><br>
-        <hr><br><br>
-        <h3 class="h3-mktg">All your issues, pull requests, projects and repo's accessible all in one place.</h3>
-        <p class="f3-mktg">We use the GitHub API to display a users repo's and activity so you can get up to date easier than ever before. </p>
-    </center>
+<head>
+  <title>FlashOne</title>
+  <link rel="icon" type="image/x-icon" href="https://reeceatkinson.github.io/momentum-alpha/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/@primer/css@^19.0.0/dist/primer.css" />
+</head>
+
+<body data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
+  <div class="Header pl-6 pr-6">
+    <div class="Header-item">
+      <a href="#" class="Header-link f4 d-flex flex-items-center">
+        <!-- <%= octicon "mark-github", class: "mr-2", height: 32 %> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="fill: white;">
+          <path fill-rule="evenodd"
+            d="M16.168 2.924L4.51 13.061a.25.25 0 00.164.439h5.45a.75.75 0 01.692 1.041l-2.559 6.066 11.215-9.668a.25.25 0 00-.164-.439H14a.75.75 0 01-.687-1.05l2.855-6.526zm-.452-1.595a1.341 1.341 0 012.109 1.55L15.147 9h4.161c1.623 0 2.372 2.016 1.143 3.075L8.102 22.721a1.149 1.149 0 01-1.81-1.317L8.996 15H4.674c-1.619 0-2.37-2.008-1.148-3.07l12.19-10.6z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item">
+      <input style="display: none;" type="search" class="form-control Header-input" />
+    </div>
+    <div class="Header-item Header-item--full">
+      <p style="display: none;">Menu</p>
+    </div>
+    <div class="Header-item mr-0">
+      <button
+        onclick="window.open('https://github.com/login/oauth/authorize?client_id=d6320aa6c48eec24448b&redirect_uri=https://reeceatkinson.github.io/momentum-alpha/profile&state=abcd1234efg567', '_blank');"
+        class="btn-mktg btn-signup-mktg btn-small-mktg" type="button">Sign in</button>
+    </div>
+  </div>
+  <div class="flash flash-full pl-6">
+    <strong>FlashOne is in BETA.</strong> We hope you love the BETA and also hope you will provide us with feedback.
+  </div>
+
+  <div class="p-6"><br><br>
+    <center>
+      <h1 class="h0-mktg" style="text-align: center;">All your GitHub Activity in one place...</h1>
+      <br><br>
+      <button class="btn-mktg btn-muted-mktg mr-3" type="button">
+        Sign Up
+      </button>
+      <button class="btn-mktg arrow-target-mktg btn-signup-mktg" type="button"
+        onclick="window.open('https://github.com/login/oauth/authorize?client_id=d6320aa6c48eec24448b&redirect_uri=https://reeceatkinson.github.io/momentum-alpha/profile&state=abcd1234efg567', '_blank');">
+        Sign In
+        <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16"
+          viewBox="0 0 16 16" fill="none">
+          <path fill="currentColor"
+            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+          </path>
+          <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+      </button><br><br>
+      <a href="https://github.com/reeceatkinson/momentum-alpha"
+        class="link-mktg arrow-target-mktg link-emphasis-mktg text-semibold f4-mktg">
+        Contribute to the project
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16"
+          viewBox="0 0 16 16" fill="none">
+          <path fill="currentColor"
+            d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+          </path>
+          <path stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+      </a>
+      <br><br><br>
+      <hr><br><br>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill-rule="evenodd"
+          d="M3 2.75A2.75 2.75 0 015.75 0h14.5a.75.75 0 01.75.75v20.5a.75.75 0 01-.75.75h-6a.75.75 0 010-1.5h5.25v-4H6A1.5 1.5 0 004.5 18v.75c0 .716.43 1.334 1.05 1.605a.75.75 0 01-.6 1.374A3.25 3.25 0 013 18.75v-16zM19.5 1.5V15H6c-.546 0-1.059.146-1.5.401V2.75c0-.69.56-1.25 1.25-1.25H19.5z">
+        </path>
+        <path
+          d="M7 18.25a.25.25 0 01.25-.25h5a.25.25 0 01.25.25v5.01a.25.25 0 01-.397.201l-2.206-1.604a.25.25 0 00-.294 0L7.397 23.46a.25.25 0 01-.397-.2v-5.01z">
+        </path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill-rule="evenodd"
+          d="M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm0 13a2 2 0 100-4 2 2 0 000 4z">
+        </path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill-rule="evenodd"
+          d="M4.75 3a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 4.75a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zM4.75 17.5a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM1.5 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0zm17.75-1.75a1.75 1.75 0 100 3.5 1.75 1.75 0 000-3.5zM16 19.25a3.25 3.25 0 116.5 0 3.25 3.25 0 01-6.5 0z">
+        </path>
+        <path fill-rule="evenodd"
+          d="M4.75 7.25A.75.75 0 015.5 8v8A.75.75 0 014 16V8a.75.75 0 01.75-.75zm8.655-5.53a.75.75 0 010 1.06L12.185 4h4.065A3.75 3.75 0 0120 7.75v8.75a.75.75 0 01-1.5 0V7.75a2.25 2.25 0 00-2.25-2.25h-4.064l1.22 1.22a.75.75 0 01-1.061 1.06l-2.5-2.5a.75.75 0 010-1.06l2.5-2.5a.75.75 0 011.06 0z">
+        </path>
+      </svg>
+      <h3 class="h3-mktg">All your issues, pull requests, projects and repo's accessible all in one place.</h3>
+      <br><br>
+
+      <img src="/snap.png" style="border-radius: 15px; border: solid 2px lightgray;" width="80%">
+      <br><br>
+      <p class="f3-mktg">We use the GitHub API to display a users repo's and activity so you can get up to date easier
+        than ever before. </p>
+      <br>
+      <hr><br><br>
+      <div class="Box Box--spacious f4">
+        <div class="Box-header">
+          <h3 class="Box-title">
+            Frequently Asked Questions:
+          </h3>
+        </div>
+        <div class="Box-body">
+          <details class="details-reset mt-3">
+            <summary class="btn-link">More <span class="dropdown-caret"></summary>
+            <div class="border p-3 mt-2">Hidden text</div>
+          </details>
+        </div>
+        <ul>
+          <li class="Box-row">
+            Box row one
+          </li>
+          <li class="Box-row">
+            Box row two
+          </li>
+        </ul>
+        <div class="Box-footer">
+          Box footer
+        </div>
       </div>
-  </body>
+    </center>
+  </div>
+</body>
+
 </html>
